@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.font-inter {
+    font-family: "Inter", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* shared styles */
+
+.btn-primary {
+    width: 130px;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 0.75rem;
+    background: linear-gradient(30deg, #F7E93F,#FB0DB2, #a600ff);
+    border: 2px solid #ED3F27;
+    border-radius: 10000px;
+}
+
+.btn-primary a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* header styles */
+
+header {
+    background-color: #1A0B2E;
+}
+
+.header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 120%;
+    font-weight: 500;
+}
+
+.logo-gradient {
+    background: linear-gradient(180deg, #cc00ff, #ffee004e);
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+}
