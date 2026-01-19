@@ -12,14 +12,19 @@
 
 /* shared styles */
 
+.btn-primary,
+.btn-primary::after {
+    transition: all 0.4s;
+}
+
 .btn-primary {
-    width: 130px;
     font-size: 1rem;
     font-weight: 700;
     padding: 1rem 0.75rem;
     background: linear-gradient(30deg, #F7E93F,#FB0DB2, #a600ff);
     border: 2px solid #ED3F27;
     border-radius: 10000px;
+    color: #fff;
 }
 
 .btn-primary a {
@@ -48,17 +53,23 @@ header {
     color: #fff;
 }
 
+.logo a {
+    text-decoration: none;
+}
+
+.logo-gradient {
+    background: linear-gradient(to right, #F26C7B, #D447C0 , #B71AF2);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .navbar a {
     color: #fff;
     font-size: 1rem;
     line-height: 120%;
     font-weight: 500;
-}
-
-.logo-gradient {
-    background: linear-gradient(180deg, #cc00ff, #ffee004e);
-    background-clip: text;
-    color: transparent;
 }
 
 .navbar ul {
@@ -71,5 +82,107 @@ header {
 }
 
 .navbar a {
+    text-decoration: none;
+}
+
+/* banner styles */
+
+#banner {
+    height: 80vh;
+    background: url(./assets/hero-bg.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.banner-container {
+    text-align: center;
+    padding: 6.3rem 0;
+}
+
+.banner-img {
+    position: relative;
+    max-width: 18.23%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.banner-img .new-badge {
+    position: absolute;
+    font-size: 1.125rem;
+    color: #1A0B2E;
+    font-weight: 700;
+    padding: 0.8rem 1rem;
+    background-color: #00FF88;
+    border-radius: 1000px;
+    left: 70%;
+    box-shadow: 0 4px 6px #08db676f;
+}
+
+.microphone {
+    width: 35%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-content {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.banner-content h2 {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.banner-content p {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.banner-btn  {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.left-banner-btn img {
+    max-width: 20px;
+}
+
+.right-banner-btn img {
+    max-width: 20px;
+}
+
+.left-banner-btn a {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem 1.25rem;
+    background: linear-gradient(30deg, #F7E93F,#FB0DB2, #a600ff);
+    border: 2px solid #ED3F27;
+    border-radius: 10000px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.right-banner-btn a {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: 2px solid #ED3F27;
+    border-radius: 10000px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
 }
