@@ -357,7 +357,69 @@ header {
     border-radius: 2rem;
 }
 
+/* feature section */
 
+#feature {
+    background-color: #1A0B2E;
+    padding: 7.5rem 0;
+}
+
+.feature-card iframe {
+    max-width: 450px;
+    max-height: 214px;;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-heading h2 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.feature-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.feature-card {
+    background-color: #250D44;
+    border-radius: 2rem;
+    max-width: 450px;
+    max-height: 450px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.feature-card-content {
+    padding: 0 2rem;
+}
+
+.feature-card-content h4 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card-content p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ffffff9a;
+    margin-bottom: 0.75rem;
+}
+
+.feature-card-content span {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    color: #00FF88;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
 
 /* responsiveness 576px */
 
@@ -431,7 +493,7 @@ header {
     }
 
     .about-content {
-        max-width: 400px;
+        max-width: 370px;
     }
 
     .about-content h2 {
@@ -486,6 +548,29 @@ header {
     .rich {
         max-width: 350px;
         margin: 0 auto;
+    }
+
+    /* feature section */
+
+    #feature {
+        padding: 2.5rem 0;
+    }
+
+    .feature-heading h2 {
+        font-size: 2rem;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+
+    .feature-card iframe {
+        max-width: 350px;
+    }
+
+    .feature-card {
+        max-width: 350px;
     }
 }
 
@@ -552,5 +637,24 @@ header {
 
     .why-techweb-container {
         padding: 0 20px;
+    }
+
+    /* feature section */
+
+    #feature {
+        padding: 3rem;
+    }
+
+    .feature-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1.5rem;
+    }
+
+    .feature-card iframe {
+        max-width: 550px;
+    }
+
+    .feature-card {
+        max-width: 550px;
     }
 }
