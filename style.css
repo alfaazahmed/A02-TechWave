@@ -196,9 +196,68 @@ header {
     text-decoration: none;
 }
 
+/* about section */
+
+#about {
+    background-color: rgb(26, 11, 46);
+    padding: 3rem 0 7.5rem 0;
+}
+
+.about-container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.about-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #ffffffab;
+}
+
+.about-content hr {
+    margin: 5rem 0;
+    border: 1px solid #ffffff0b;
+}
+
+.about-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+}
+
+.about-card-container h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #00FF88;
+    margin-bottom: 1rem;
+}
+
+.about-card-container span {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    color: #ffffffc5;
+}
+
 /* responsiveness 576px */
 
 @media screen and (max-width: 576px) {
+
+    /* header and banner section */
+
     .header-container {
         max-width: 390px;
         margin: 0 auto;
@@ -256,5 +315,81 @@ header {
 
     .banner-content p {
         margin-bottom: .8rem;
+    }
+
+    /* about section */
+
+    #about {
+        padding: 3rem 0 3rem 0;
+    }
+
+    .about-content {
+        max-width: 400px;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+    }
+
+    .about-content br {
+        display: none;
+    }
+
+    .about-content p {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-content hr {
+        margin: 2rem;
+    }
+
+    .about-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* responsiveness for 576px to 992px */
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .circle {
+        width: 260px;
+        height: 250px;
+        margin-bottom: .8rem;
+    }
+
+    .microphone {
+        width: 25%;
+        height: auto;
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #banner {
+        padding: 3.5rem 0;
+    }
+
+    /* about section */
+
+    #about {
+        padding: 3rem 0 3rem 0;
+    }
+
+    .about-content {
+        max-width: 700px;
+    }
+
+    .about-content br {
+        display: none;
+    }
+
+    .about-content p {
+        margin-bottom: 1.5rem;
+    }
+
+    .about-content hr {
+        margin: 2rem;
     }
 }
