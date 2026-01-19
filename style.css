@@ -32,6 +32,14 @@
     color: #fff;
 }
 
+.section-heading h2 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
 /* header styles */
 
 header {
@@ -371,14 +379,6 @@ header {
     margin-bottom: 1.5rem;
 }
 
-.feature-heading h2 {
-    font-size: 3rem;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
 .feature-container {
     max-width: 1440px;
     margin: 0 auto;
@@ -419,6 +419,48 @@ header {
     color: #00FF88;
     display: inline-block;
     margin-bottom: 1.5rem;
+}
+
+/* host section */
+
+#host {
+    background-color: #1A0B2E;
+    padding-bottom: 7.5rem;
+}
+
+.host-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.host-container {
+    background-color: #351165;
+    border-radius: 2.5rem;
+}
+
+.host-identity h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.host-identity p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #ffffff92;
+    margin-bottom: 1rem;
+}
+
+.host-social-icons img {
+    margin-right: 0.5rem;
+    border: 1px solid #ffffff6c;
+    padding: 0.5rem;
+    border-radius: 50%;
 }
 
 /* responsiveness 576px */
@@ -572,6 +614,27 @@ header {
     .feature-card {
         max-width: 350px;
     }
+
+    /* host section */
+
+    #host {
+        padding: 3.75rem 0 2.5rem 0;
+    }
+
+    .section-heading h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    .host-container {
+        flex-direction: column;
+        max-width: 350px;
+        text-align: center;
+    }
+
+    .host-identity h4 {
+        font-size: 1.5rem;
+    }
 }
 
 /* responsiveness for 576px to 992px */
@@ -656,5 +719,12 @@ header {
 
     .feature-card {
         max-width: 550px;
+    }
+
+    /* host section */
+
+    .host-container {
+        max-width: 750px;
+        padding: 0 20px;
     }
 }
