@@ -232,7 +232,7 @@ header {
 .about-content p {
     font-size: 1rem;
     line-height: 1.25rem;
-    color: #ffffffab;
+    color: rgba(255, 255, 255, 0.596);
 }
 
 .about-content hr {
@@ -336,7 +336,7 @@ header {
 .rich p {
     font-size: 1rem;
     line-height: 1.5rem;
-    color: #ffffff84;
+    color: rgba(255, 255, 255, 0.596);
 }
 
 .premium {
@@ -408,7 +408,7 @@ header {
 .feature-card-content p {
     font-size: 1rem;
     line-height: 1.5rem;
-    color: #ffffff9a;
+    color: rgba(255, 255, 255, 0.596);
     margin-bottom: 0.75rem;
 }
 
@@ -452,7 +452,7 @@ header {
 .host-identity p {
     font-size: 1rem;
     line-height: 1.5rem;
-    color: #ffffff92;
+    color: rgba(255, 255, 255, 0.596);
     margin-bottom: 1rem;
 }
 
@@ -476,36 +476,36 @@ footer {
     text-align: center;
 }
 
-footer h2 {
+.footer-container h2 {
     color: #fff;
     font-size: 2.5rem;
     margin-bottom: 2rem;
 }
 
-.footer-icons a {
-    text-decoration: none;
-    color: #ffffff90;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.footer-icons {
-    margin-bottom: 2rem;
+.footer-card-container {
+    max-width: 600px;
+    margin: 0 auto;
     display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    gap: 2.5rem;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.footer-icons img {
+.footer-card-container img {
     width: 24px;
+    height: 24px;
 }
 
-.footer-container p {
-    color: #ffffff63;
+.footer-card {
+    display: flex;
+    gap: 0.5rem;
+    color: #fff;
+    justify-content: center;
+}
+
+.footer-copyright-text {
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.596);
     font-size: 1rem;
-    font-weight: 500;
+    line-height: 1.5rem;
 }
 
 /* responsiveness 576px */
@@ -656,8 +656,14 @@ footer h2 {
         max-width: 350px;
     }
 
+    .feature-card h4 {
+        font-size: 1.25rem;
+    }
+
     .feature-card {
         max-width: 350px;
+        margin: 0 auto;
+        gap: 1.5rem;
     }
 
     /* host section */
@@ -683,7 +689,26 @@ footer h2 {
 
     /* footer */
 
-    
+    .footer-container {
+        padding: 2.5rem 0;
+    }
+
+    .footer-container h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-card-container {
+        max-width: 350px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+    .footer-card img {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 /* responsiveness for 576px to 992px */
