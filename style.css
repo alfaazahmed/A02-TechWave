@@ -12,11 +12,6 @@
 
 /* shared styles */
 
-.btn-primary,
-.btn-primary::after {
-    transition: all 0.4s;
-}
-
 .btn-primary {
     font-size: 1rem;
     font-weight: 700;
@@ -25,6 +20,25 @@
     border: 2px solid #ED3F27;
     border-radius: 10000px;
     color: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #F63049, #D02752, #8A244B);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    width: 100%;
 }
 
 .btn-primary a {
@@ -60,7 +74,7 @@ header {
 }
 
 .logo h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 900;
     color: #fff;
 }
@@ -70,7 +84,7 @@ header {
 }
 
 .logo-gradient {
-    background: linear-gradient(to right, #F26C7B, #D447C0, #B71AF2);
+    background: linear-gradient(20deg, #F7E93F, #FB0DB2, #7702b6);
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
@@ -176,32 +190,78 @@ header {
     max-width: 20px;
 }
 
-.left-banner-btn a {
+.left-banner-btn {
     font-size: 1rem;
     font-weight: 700;
     padding: 0.75rem 1.25rem;
     background: linear-gradient(30deg, #F7E93F, #FB0DB2, #a600ff);
     border: 2px solid #ED3F27;
     border-radius: 10000px;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-.right-banner-btn a {
+.left-banner-btn a {
+    display: flex;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.left-banner-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #F63049, #D02752, #8A244B);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.left-banner-btn:hover::before {
+    width: 100%;
+}
+
+.right-banner-btn {
     font-size: 1rem;
     font-weight: 700;
     padding: 0.75rem 1.25rem;
     background: transparent;
-    border: 2px solid #00FF88;
+    border: 2px solid #ED3F27;
     border-radius: 10000px;
-    color: #00FF88;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.right-banner-btn img {
+    height: 18px;
+}
+
+.right-banner-btn a {
     display: flex;
-    align-items: center;
     gap: 0.5rem;
     text-decoration: none;
+    color: #fff;
+}
+
+.right-banner-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #F63049, #cd0ca6, #991f11);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.right-banner-btn:hover::before {
+    width: 100%;
 }
 
 /* about section */
@@ -280,8 +340,7 @@ header {
     margin: 0 auto;
     display: grid;
     gap: 2rem;
-    grid-template-areas:
-        "premium    mobile    mobile"
+    grid-template-areas: "premium    mobile    mobile"
         "premium    global    global"
         "exclusive  exclusive rich";
 }
@@ -374,7 +433,8 @@ header {
 
 .feature-card iframe {
     max-width: 450px;
-    max-height: 214px;;
+    max-height: 214px;
+    ;
     border-radius: 2rem;
     margin-bottom: 1.5rem;
 }
@@ -478,8 +538,8 @@ footer {
 
 .footer-container h2 {
     color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+    font-size: 4rem;
+    margin-bottom: 1.3rem;
 }
 
 .footer-card-container {
@@ -549,7 +609,7 @@ footer {
     }
 
     #banner {
-        max-height: 446px;
+        max-height: 436px;
         max-width: 576px;
         background-size: cover;
         background-position: center;
@@ -560,7 +620,7 @@ footer {
     }
 
     .banner-content {
-        max-width: 400px;
+        max-width: 380px;
     }
 
     .banner-content h2 {
@@ -620,8 +680,7 @@ footer {
     }
 
     .why-techweb-container {
-        grid-template-areas:
-            "premium"
+        grid-template-areas: "premium"
             "mobile"
             "global"
             "exclusive"
@@ -681,6 +740,7 @@ footer {
         flex-direction: column;
         max-width: 350px;
         text-align: center;
+        padding: 15px;
     }
 
     .host-identity h4 {
@@ -689,11 +749,17 @@ footer {
 
     /* footer */
 
+    footer {
+        background-size: cover;
+        background-position: center;
+    }
+
     .footer-container {
         padding: 2.5rem 0;
     }
 
     .footer-container h2 {
+        font-size: 3rem;
         margin-bottom: 1.5rem;
     }
 
@@ -766,10 +832,9 @@ footer {
     }
 
     .why-techweb-container {
-        grid-template-areas:
-        "premium mobile"
-        "premium global"
-        "exclusive rich";
+        grid-template-areas: "premium mobile"
+            "premium global"
+            "exclusive rich";
     }
 
     .why-techweb-container {
