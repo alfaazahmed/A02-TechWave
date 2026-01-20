@@ -13,9 +13,10 @@
 /* shared styles */
 
 .btn-primary {
+    display: inline-block;
     font-size: 1rem;
     font-weight: 700;
-    padding: 1rem 0.75rem;
+    padding: 0.75rem 1rem;
     background: linear-gradient(30deg, #F7E93F, #FB0DB2, #a600ff);
     border: 2px solid #ED3F27;
     border-radius: 10000px;
@@ -23,6 +24,7 @@
     position: relative;
     overflow: hidden;
     z-index: 1;
+    text-decoration: none;
 }
 
 .btn-primary::before {
@@ -37,13 +39,9 @@
     z-index: -1;
 }
 
-.btn-primary:hover::before {
+.btn-primary:hover::before,
+.btn-primary:active::before {
     width: 100%;
-}
-
-.btn-primary a {
-    text-decoration: none;
-    color: #fff;
 }
 
 .section-heading h2 {
@@ -202,13 +200,6 @@ header {
     z-index: 1;
 }
 
-.left-banner-btn a {
-    display: flex;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #fff;
-}
-
 .left-banner-btn::before {
     content: '';
     position: absolute;
@@ -219,10 +210,6 @@ header {
     background: linear-gradient(90deg, #F63049, #D02752, #8A244B);
     transition: 0.5s;
     z-index: -1;
-}
-
-.left-banner-btn:hover::before {
-    width: 100%;
 }
 
 .right-banner-btn {
@@ -241,13 +228,6 @@ header {
     height: 18px;
 }
 
-.right-banner-btn a {
-    display: flex;
-    gap: 0.5rem;
-    text-decoration: none;
-    color: #fff;
-}
-
 .right-banner-btn::before {
     content: '';
     position: absolute;
@@ -262,6 +242,31 @@ header {
 
 .right-banner-btn:hover::before {
     width: 100%;
+}
+
+.left-banner-btn,
+.right-banner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.left-banner-btn:hover::before,
+.left-banner-btn:active::before {
+    width: 100%;
+}
+
+.right-banner-btn:hover::before,
+.right-banner-btn:active::before {
+    width: 100%;
+}
+
+.btn-primary,
+.left-banner-btn,
+.right-banner-btn {
+    cursor: pointer;
 }
 
 /* about section */
